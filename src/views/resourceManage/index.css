@@ -1,0 +1,13 @@
+.form-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.my-form {
+    flex: 1;
+    max-width: 650px !important;
+}
+.submit-btn {
+    width: 50%;
+}
