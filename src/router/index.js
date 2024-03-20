@@ -1,7 +1,4 @@
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
-import Login from '../views/login'
-import Home from '../layout'
-import Index from '../views/index'
 import { routes } from './config'
 import { getToken } from '../utils/auth'
 
