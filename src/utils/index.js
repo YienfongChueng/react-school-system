@@ -21,6 +21,25 @@ export const formatDate = (value,type='datetime')=> {
     } 
 }
 
+// 防抖
+export const  debounce = (callback, delay)=>{
+	let timerId
+	return function (event) {
+		// 如果上次事件还没有真正处理, 清除
+		if (timerId) {
+			clearTimeout(timerId)
+		}
+		// 事件发生指定事件后才调用处理事件的回调函数
+		// 启动定时器, 只是准备真正处理
+		timerId = setTimeout(() => {
+			// 正在处理事件
+			callback.call(null, event)
+			// 删除准备处理的标记
+			timerId = null
+		}, delay)
+	}
+}
+
 
 export function downloadFile(
     request,

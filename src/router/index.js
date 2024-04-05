@@ -26,6 +26,7 @@ function Auth(props) {
     const { path,children } = props
     // 如果是登录页面，pass
     if(path === '/login') return children
+    if(path === '/test') return children
     // 如果有token，pass
     if(getToken()) {
         return children

@@ -1,5 +1,6 @@
 import { Navigate } from 'react-router-dom'
 import Login from '../views/login'
+import Test from '../views/test' // 数据大屏
 import Home from '../layout'
 import menus from './menu'
 import permission from '../utils/permission'
@@ -32,6 +33,11 @@ export const routes = [
         path: '/login',
         name: 'login',
         element: <Login />,
+    },
+    {
+        path:'/test',
+        name:'test',
+        element:< Test />
     },
     {
         path: '/home',

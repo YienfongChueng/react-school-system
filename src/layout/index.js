@@ -13,6 +13,9 @@ import MyBreadcrumb from './MyBreadcrumb';
 import permission from '../utils/permission'
 import './index.css'
 
+import {connect} from 'react-redux'
+import setRoleType from '../redux/action'
+
 const { Header, Sider, Content } = Layout;
 
 /**
@@ -31,7 +34,7 @@ function initItems(data) {
     })    
 }
 
-export default function Home() {
+ function Home(props) {
     
     const [collapsed, setCollapsed] = useState(false);
     const [menuItems,setMenuItems] = useState(initItems(permission(menus)))
@@ -39,7 +42,7 @@ export default function Home() {
     const navigate = useNavigate();
     function logout() {
         removeToken()
-        removeRoleType()
+        props.setRoleType(null)
         navigate('/login')
     }
     return (
@@ -86,3 +89,9 @@ export default function Home() {
         </div>
     )
 }
+function mapDispatchToProps(dispatch) {
+    return {
+        setRoleType: (type) => dispatch(setRoleType(type))
+    }
+}
+export default connect(null,mapDispatchToProps)(Home)

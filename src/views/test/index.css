@@ -1,0 +1,52 @@
+.container {
+    width: 1920px;  /*设计稿的宽度*/
+    height: 960px;   /*设计稿的高度*/
+    transform-origin: 0 0;
+    position: absolute;
+    left: 50%;
+}
+.header-wrap {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content:center;
+    align-content: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'left1 center right1'
+                        'left2 center right2'
+                        'left3 bottom right3';
+
+}
+.item {
+    border: 1px solid #ccc;
+}
+.item-left1 {
+    grid-area:left1;
+}
+.item-left2 {
+    grid-area:left2;
+}
+.item-left3 {
+    grid-area:left3;
+}
+.item-right1 {
+    grid-area:right1;
+}
+.item-right2 {
+    grid-area:right2;
+}
+.item-right3 {
+    grid-area:right3;
+}
+.item-center {
+    grid-area:center;
+}
+.item-bottom {
+    grid-area:bottom;
+}

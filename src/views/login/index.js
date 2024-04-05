@@ -3,10 +3,13 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom'
 import { userLogin } from '../../http/api'
 import { setToken } from '../../utils/auth'
-import { setRoleType } from '../../utils/role';
+// import { setRoleType } from '../../utils/role';
+import setRoleType from '../../redux/action'
 import md5 from 'md5'
 import './index.css'
-export default function Login(){
+import {connect} from 'react-redux'
+
+function Login(props){
     const navigate = useNavigate()
     const [form] = Form.useForm(); //创建 Form 实例，用于管理所有数据状态。
     const handleLogin = ()=> {
@@ -25,7 +28,7 @@ export default function Login(){
                         type:'success'
                     })
                     setToken(data.token)
-                    setRoleType(data.user.type)
+                    props.setRoleType(data.user.type)
                     navigate('/home/index')
                 }
             })
@@ -112,3 +115,16 @@ export default function Login(){
         </div>
     )
 }
+
+function mapStateToProps(state) {
+    return {
+        roleType:state.roleType
+    }
+} 
+function mapDispatchToProps(dispatch) {
+    return {
+        setRoleType: (type) => dispatch(setRoleType(type))
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Login)
+
