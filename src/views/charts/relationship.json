@@ -1,0 +1,71 @@
+{  
+  "nodes": [  
+    {  
+      "id": "node1",  
+      "label": "张三",  
+      "type": "person",  
+      "color": "#5B8FF9",  
+      "size": 80  
+    },  
+    {  
+      "id": "node2",  
+      "label": "李四",  
+      "type": "person",  
+      "color": "#DE3F24",  
+      "size": 70  
+    },  
+    {  
+      "id": "node3",  
+      "label": "王五",  
+      "type": "person",  
+      "color": "#2ECC71",  
+      "size": 90  
+    },  
+    {  
+      "id": "node4",  
+      "label": "赵六",  
+      "type": "person",  
+      "color": "#F1C40F",  
+      "size": 60  
+    },  
+    {  
+      "id": "node5",  
+      "label": "孙七",  
+      "type": "person",  
+      "color": "#E74C3C",  
+      "size": 75  
+    }  
+  ],  
+  "edges": [  
+    {  
+      "source": "node1",  
+      "target": "node2",  
+      "label": "夫妻",  
+      "color": "#A3B1BF"  
+    },  
+    {  
+      "source": "node1",  
+      "target": "node3",  
+      "label": "好友",  
+      "color": "#7F8C8D"  
+    },  
+    {  
+      "source": "node2",  
+      "target": "node4",  
+      "label": "同事",  
+      "color": "#9B59B6"  
+    },  
+    {  
+      "source": "node3",  
+      "target": "node5",  
+      "label": "兄弟",  
+      "color": "#3498DB"  
+    },  
+    {  
+      "source": "node4",  
+      "target": "node1",  
+      "label": "旧友",  
+      "color": "#2980B9"  
+    }  
+  ]  
+}
