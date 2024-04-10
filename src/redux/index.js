@@ -11,7 +11,7 @@ import rootReducer from './reducer'
 const persistConfig = {
     key: 'root',
     storage,
-    blacklist:[]  //设置某个reducer数据不持久化，白名单
+    blacklist:[]  //设置某个reducer数据不持久化，黑名单
   }
 
 

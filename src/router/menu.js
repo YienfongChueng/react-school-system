@@ -8,6 +8,10 @@ import ResourceManage from '../views/resourceManage'
 import ResourceUpload from '../views/resourceManage/resourceUpload'
 import ResourceDownload from '../views/resourceManage/resourceDownload'
 
+import Drag from '../views/drag' // 拖拉拽demo
+import Charts from '../views/charts' // 图表demo
+import Editor from '../views/editor'
+
 import {
     HomeOutlined, //首页
     ReadOutlined, //课程管理
@@ -15,11 +19,14 @@ import {
     SolutionOutlined, // 教师信息
     BookOutlined, //所授课程
     UserOutlined, // 学生管理
-    // ProfileOutlined, //排课管理
+    ProfileOutlined, //排课管理 
+    InsertRowAboveOutlined, //drag
     FolderOpenOutlined, //资料管理
     UploadOutlined, // 资料上传
     CloudDownloadOutlined, //资料下载
-    // KeyOutlined, // 权限管理
+    // KeyOutlined,// 权限管理
+    BarChartOutlined , //  charts
+    ScheduleOutlined // editor
   } from '@ant-design/icons';
 const menus = [
     {
@@ -88,8 +95,28 @@ const menus = [
                 icon: <CloudDownloadOutlined/>, 
             },
         ]
+    },
+    {
+        name: 'drag',
+        title: '拖拉拽demo',
+        url: '/home/drag',
+        element: <Drag />,
+        icon: <InsertRowAboveOutlined />
+    },
+    {
+        name: 'charts',
+        title: '图表demo',
+        url: '/home/charts',
+        element: <Charts />,
+        icon: <BarChartOutlined/>
+    },
+    {
+        name: 'editor',
+        title: 'wangEditor编辑器demo',
+        url: '/home/editor',
+        element: <Editor/>,
+        icon: <ScheduleOutlined />
     }
-
 ]
 
 export default menus
